@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Instrument+Serif&family=Montserrat:wght@300&family=Raleway&family=Roboto+Condensed:ital,wght@0,400;1,300&family=Roboto:wght@100;300;400&family=Sedgwick+Ave+Display&display=swap');
+body{
+    background-color:#0D1282;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+h1{
+    padding:20px;
+}
+h2{
+    padding:10px;
+}
+#box{
+    margin:5% auto;
+    background-color: #D4E2D4;
+    color:black;
+    font-family: 'Montserrat', sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid  #D4E2D4;;
+    border-radius:25px;
+    width:fit-content;
+}
+#answers{
+    display: flex;
+    flex-direction: column;
+    row-gap:10px;
+    padding: 10px;
+}
+button{
+    color:#D4E2D4;
+    padding:10px;
+    background-color: #0D1282;
+    border:2px solid #0D1282;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: black;
+    border:2px solid black;
+}
+#next{
+    background-color: #D4E2D4;
+    color:black;
+    width: fit-content;
+    display: none;
+}
+button.correct{
+    background-color: #017E00;
+}
+button.incorrect{
+    background-color: #D33127;
+}
+button.ply{
+    background-color: #D4E2D4;
+    color:black;
+    width: fit-content;
+    display: none;
+}
