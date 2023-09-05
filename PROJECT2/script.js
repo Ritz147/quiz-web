@@ -199,6 +199,14 @@ answer:[
 let index=0;
 let score=0;
 console.log(index);
+register=document.querySelectorAll("#box")[0];
+quiz=document.querySelectorAll("#box")[1];
+console.log(quiz);
+quiz.style.display="none";
+submit=document.getElementById("submit");
+console.log(submit);
+const input=document.getElementById("username");
+let username="";
 function resetState(){
     nextbtn=document.getElementById("next");
     nextbtn.style.display="none";
@@ -255,7 +263,7 @@ function showQuestion(){
         qElement=document.getElementById("question");
         qElement.style.display="none";
         answerb=document.createElement("button");
-        answerb.innerText="You have scored "+score+" out of 20!";
+        answerb.innerText="Congratulations "+username+"! You have scored "+score+" out of 20!";
         answers.appendChild(answerb);
         const button=document.createElement("button");
         button.classList.add("ply");
@@ -267,17 +275,24 @@ function showQuestion(){
 }
 
 function startQuiz(){
+    console.log("in startQuiz");
+    quiz.style.display="block";
+    register.style.display="none";
     index=0;
     score=0;
-    console.log("In startquiz")
+    qElement=document.getElementById("question");
+    qElement.style.display="block";
     showQuestion();
 }
 function restart(e){
     button=e.target;
     button.style.display="none";
-    qElement=document.getElementById("question");
-    qElement.style.display="block";
     startQuiz();
 }
-startQuiz();
+submit.addEventListener("click",()=>{
+    username=input.value;
+    console.log(username);
+    startQuiz();
+});
+
 
